@@ -66,11 +66,6 @@ pids/
 *.seed
 *.pid.lock
 
-# Yaml files
-*.yml
-*.yaml
-!docker-compose.yml
-
 # Directory for uploaded files (if your app handles file uploads)
 /uploads
 

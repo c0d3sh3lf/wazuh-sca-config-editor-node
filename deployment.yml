@@ -1,0 +1,21 @@
+# Deployment definition
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wazuh-sca-config-editor
+  namespace: wazuh-sca-config-editor
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: wazuh-sca-config-editor
+    template:
+      metadata:
+        labels:
+          app: wazuh-sca-config-editor
+      spec:
+        containers:
+          - name: wazuh-sca-config-editor
+            image: invad3rsam/wazuh-sca-config-editor:latest
+            ports:
+              - containerPort: 3000

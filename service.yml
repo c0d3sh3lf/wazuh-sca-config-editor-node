@@ -1,0 +1,14 @@
+# Nodeport service definition
+apiVersion: v1
+kind: Service
+metadata:
+  name: wazuh-sca-config-editor-service
+  namespace: wazuh-sca-config-editor
+spec:
+  type: NodePort
+  selector:
+    app: wazuh-sca-config-editor
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 31000
