@@ -1,0 +1,12 @@
+{
+  "name": "wazuh-sca-config-editor-node",
+  "version": "1.0.0",
+  "description": "Wazuh Security Configuration Auditor YAML editor to customize the security YAML configuration file as per your need.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sumit Shrivastava",
+  "license": "GPL-3.0-only"
+}
