@@ -1,0 +1,5 @@
+# Namespace definition
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: wazuh-sca-config-editor
