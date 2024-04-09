@@ -16,4 +16,4 @@ COPY --from=builder /app .
 # COPY --from=builder /app/dist ./dist
 
 EXPOSE 3000
-CMD["node", "app.js"] # Make sure to point to your main app file correctly
+CMD ["node", "app.js"] # Make sure to point to your main app file correctly
