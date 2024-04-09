@@ -1,9 +1,9 @@
 # Stage 1: Build the application
 FROM node:20 AS builder
 WORKDIR /app
-COPY package*.json ./
+COPY app/package*.json ./
 RUN npm install
-COPY . .
+COPY ./app .
 
 #Stage 2: Create the final image using Alpine
 FROM alpine:latest
