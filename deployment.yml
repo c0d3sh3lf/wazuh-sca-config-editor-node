@@ -16,6 +16,6 @@ spec:
       spec:
         containers:
           - name: wazuh-sca-config-editor
-            image: invad3rsam/wazuh-sca-config-editor:latest
+            image: invad3rsam/wazuh-sca-config-editor-node:latest
             ports:
               - containerPort: 3000
