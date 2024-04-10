@@ -3,7 +3,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wazuh-sca-config-editor
-  labels: wazuh-sca-config-editor
+  labels: 
+    app: wazuh-sca-config-editor
 spec:
   replicas: 2
   selector:
