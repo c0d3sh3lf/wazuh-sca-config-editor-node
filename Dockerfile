@@ -10,6 +10,7 @@ FROM alpine:latest
 # Ensure you install the specific Node.js version you need. Alpine's package repository might not have the latest version.
 RUN apk add --no-cache nodejs npm
 WORKDIR /app
+RUN mkdir uploads
 COPY --from=builder /app .
 
 #If you have a build step that outpus to a dist or build folder, make sure to copy that instead
