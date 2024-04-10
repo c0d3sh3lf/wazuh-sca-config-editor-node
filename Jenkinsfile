@@ -6,14 +6,14 @@ pipeline {
   }
   agent any
   stages {
-    stage('Checkout Source') {
-      steps {
-        checkout scm: [$class: 'GitSCM',
-        branches: [[name: '*/development']],
-        userRemoteConfigs: [[credentialsId: 'github-fa-token', 
-        url: 'https://github.com/c0d3sh3lf/wazuh-sca-config-editor-node']]]
-      }
-    }
+    // stage('Checkout Source') {
+    //   steps {
+    //     checkout scm: [$class: 'GitSCM',
+    //     branches: [[name: '*/development']],
+    //     userRemoteConfigs: [[credentialsId: 'github-fa-token', 
+    //     url: 'https://github.com/c0d3sh3lf/wazuh-sca-config-editor-node']]]
+    //   }
+    // }
     stage('Building Image') {
         steps {
             script {
@@ -30,7 +30,6 @@ pipeline {
     stage('Deploy the app on cluster') {
       steps {
         script {
-          sh 'kubectl apply -f namespace.yaml'
           sh 'kubectl apply -f deployment.yaml'
           sh 'kubectl apply -f service.yaml'
         }
