@@ -1,5 +1,6 @@
 const express = require('express');
 const multer = require('multer');
+const cors = require('cors');
 const fs = require('fs');
 const yaml = require('js-yaml');
 const app = express();
@@ -19,6 +20,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 app.use(express.json({ limit: '5mb' }));
+app.use(cors());
 
 // Endpoint to get the YAML content
 app.post('/fetch-config', upload.single('ruleset'), (req, res) => {
